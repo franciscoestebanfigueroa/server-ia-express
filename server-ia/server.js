@@ -43,7 +43,8 @@ io.on('connection', socket => {
 });
 
 //const PORT = 443; // Puedes cambiar el puerto si es necesario
-app.listen(process.env.PORT, (e) => {
-  if(e) throw new Error(e);
+server.listen(process.env.PORT, (err) => {
+  if(err) throw new Error(err);
+  
   console.log(`Servidor de sockets en funcionamiento en el puerto ${process.env.PORT}`);
 });

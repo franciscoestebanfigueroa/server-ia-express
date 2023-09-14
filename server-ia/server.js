@@ -23,6 +23,7 @@ io.on('connection', socket => {
 
   socket.on('mensajex', data => {
     console.log('Mensaje desde ESP32 1:', data["nombre"]);
+    console.log('Mensaje desde ESP32 1:', data["nombre"]);
     console.log('Mensaje desde ESP32 2:', data["estado"]);
     // Aquí puedes realizar acciones en respuesta al mensaje del ESP32
     socket.broadcast.emit('mensajex', data);

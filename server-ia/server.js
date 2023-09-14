@@ -4,8 +4,7 @@ const http = require('http');
 
 const dotenv = require('dotenv').config(); 
 
-app.use(express.static(publicPath));
-const server = http.createServer(app);
+const server = http.createServer(app);//correcion
 
 const socketIO = require('socket.io');
 
@@ -14,6 +13,7 @@ const io = socketIO(server);
 const path =require('path');
 const { error } = require('console');
 const publicPath = path.resolve(__dirname,'public');
+app.use(express.static(publicPath));
 
 
 io.on('connection', socket => {
